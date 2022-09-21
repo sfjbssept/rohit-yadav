@@ -8,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 public class StudentServiceConfig {
 
 	@Bean
+	
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
