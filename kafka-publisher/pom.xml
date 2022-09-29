@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.flight</groupId>
-	<artifactId>kafka-publish</artifactId>
+	<artifactId>kafka-publisher</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Flight-booking</name>
+	<name>kafka-publisher</name>
 	<description>School project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
