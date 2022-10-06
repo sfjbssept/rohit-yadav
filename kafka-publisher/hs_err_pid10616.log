@@ -1,0 +1,36 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x00007ff8e5a66e76, pid=10616, tid=4272
+#
+# JRE version: OpenJDK Runtime Environment Temurin-17.0.4+8 (17.0.4+8) (build 17.0.4+8)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-17.0.4+8 (17.0.4+8, mixed mode, emulated-client, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x386e76]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57521 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=kafka-publisher -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages com.publish.KafkaPublisherApplication --spring.output.ansi.enabled=always
+
+Host: Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz, 2 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+Time: Fri Sep 30 04:37:00 2022 Coordinated Universal Time elapsed time: 0.306855 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000027894da8940):  JavaThread "Common-Cleaner" daemon [_thread_in_vm, id=4272, stack(0x0000009975100000,0x0000009975200000)]
+
+Stack: [0x0000009975100000,0x0000009975200000],  sp=0x00000099751ff2d0,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x386e76]
+V  [jvm.dll+0x677262]
+V  [jvm.dll+0x387acb]
+V  [jvm.dll+0x387d57]
+V  [jvm.dll+0x40dd51]
+V  [jvm.dll+0x7e7eeb]
+V  [jvm.dll+0x7e245a]
