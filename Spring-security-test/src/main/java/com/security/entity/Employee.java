@@ -1,4 +1,4 @@
-package com.security.entity;
+package com.secure.entity;
 
 import java.util.Objects;
 
@@ -53,4 +53,5 @@ public class Employee {
 
 		return Objects.equals(this.name, employee.name) && Objects.equals(this.role, employee.role);
 	}
+
 }
