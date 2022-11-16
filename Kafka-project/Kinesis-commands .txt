@@ -1,0 +1,9 @@
+ aws kinesis describe-stream --stream-name nishant-stream --region us-east-1
+
+aws kinesis put-record --stream-name nishant-stream --partition-key 1 --data 1 --region us-east-1
+
+
+ aws kinesis get-shard-iterator --stream-name nishant-stream --shard-iterator-type TRIM_HORIZON --shard-id shardId-000000000000
+
+
+aws kinesis get-records --shard-iterator AAAAAAAAAAFWgzkpyNdHgYH1SkeuXmMJnnctjec5QKp3/HXvH9T88RKql9863s63AG1xUpGuXoUesJccJ754d972UpHuPLLoIz2fwVQcp0iTGtPVXWzbA4SRGbPDhff/lYp/UAPbuBGhyoM4oJRvEzUSs20ZvapcJhmT62bDyqO+KXT947bYy94Ejjzup9rIqD/MmHDQMEaOoCjOf4hUsEpFA440sNda776l631Y1fTnjmx2pgMXkw== --limit 3
