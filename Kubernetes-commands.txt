@@ -1,0 +1,56 @@
+	i. POD -> In kubernetes we don't interact with the containers directly, we interct with the pods and the pods can wrap a single container in it or multiple 
+	ii. NODE -> wraps all pods, all pods can we wrapped inside a node.
+	iii. Cluster ->  a cluster is a group of all nodes 
+	iv. Replication controller / replication sets -> will allow us to create replicas of pre existing pods to make sure there is no application downtime if the main pod stops working for some reason.  
+	v. Service -> it provides us with a fixed dns name for communication between pods
+	vi. Deployment -> Deployment are kubernetes objects that helps us to manage pods 
+	Kubectl create deployment first-deployment -image= <image name> --port=8080 --replicas = 10
+	vii. Secrets
+	viii. Config map
+	ix. ETCD -> key-value base database which stores config , it can store secret and config map inside etcd database.
+
+Install -> kubectl
+intall minikube
+install docker desktop
+add paths for all three
+
+check installation version for minikube running
+1. minikube version
+2. minikube start --driver=docker (make sure that docker and kuber nates is up and running before running this command)
+3. minikube status
+
+4. to check the cluster info 
+	kubectl cluster-info
+5. to check if we have the minikube node ready 
+	kubectl get node
+
+6. minikube docker-env
+
+7. docker images
+kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=<ur username> --docker-password=<your password>  --docker-email=<your email>
+
+8. springboot-k8-demo>docker build -t username/springboot-k8s-demo:1.0 .
+
+9.kubectl create deployment springboot-k8s --image=username/springboot-k8s-demo:1.0 --port=8080
+
+10. kubectl get deployment ( to see all the deployments )
+
+11. kubectl describe deployment springboot-k8s to check the details of the deployment 
+
+12. kubectl get pods
+
+13. kubectl logs springboot-k8s5-765b59576c-5gfqr
+
+
+14. kubectl get deployments
+
+15. kubectl expose deployment springboot-k8s5 --type=NodePort
+
+
+16. minikube service springboot-k8s5 --url
+
+
+now keep this cmd open and go to the url to access the spring boot app .
+
+
+

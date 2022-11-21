@@ -1,4 +1,3 @@
-
 export default class Student {
     firstname:string= " ";
     lastname: string = " ";
